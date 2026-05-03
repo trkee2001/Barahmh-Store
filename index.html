@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بارحمة - متجر العطور</title>
+  <link href="https://fonts.googleapis.com/css2?family=Thaman&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark">ع</span>
+        <div>
+          <h1>بارحمة</h1>
+          <p>أفضل العطور الشرقية والغربية</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a class="nav-link" href="orders.html">صفحة الطلبات</a>
+        <button id="cart-toggle" class="icon-button" aria-label="عرض السلة">
+          🛒 <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="ad-banner">
+      <div class="ad-banner-content">
+        <span>مكان لقائم الإعلانات</span>
+        <p>إعلان خاص أو عرض رمضان، مميز هنا لزيادة المبيعات.</p>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">عطر لكل لحظة</p>
+        <h2>اكتشف مجموعة عطورنا الفاخرة</h2>
+        <p class="hero-copy">تسوّق أجود أنواع العود، الورود، والفواكه مع تجربة شراء سريعة وآمنة.</p>
+        <div class="hero-buttons">
+          <button class="primary-button" id="show-all">عرض جميع المنتجات</button>
+          <button class="secondary-button" id="scroll-products">تصفح العطور</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-glow"></div>
+        <div class="hero-card-content">
+          <span>عطر اليوم</span>
+          <h3>العود الملكي</h3>
+          <p>رائحة عميقة تدوم طويلاً مع لمسات العنبر وخشب الصندل.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="filters">
+      <input type="search" id="search-input" placeholder="ابحث عن عطر" aria-label="ابحث عن عطر">
+      <div class="category-buttons" role="group" aria-label="فلتر الفئة">
+        <button class="category-button active" data-category="all">كل الفئات</button>
+        <button class="category-button gender-male" data-category="رجالي">رجالي</button>
+        <button class="category-button gender-female" data-category="نسائي">نسائي</button>
+        <button class="category-button gender-unisex" data-category="موحد">موحد</button>
+      </div>
+    </section>
+
+    <section class="badge-filters">
+      <button class="badge-filter-button active" data-badge="all">عرض الكل</button>
+      <button class="badge-filter-button" data-badge="الأكثر مبيعًا">الأكثر مبيعًا</button>
+      <button class="badge-filter-button" data-badge="الجديد">الجديد</button>
+      <button class="badge-filter-button" data-badge="خيار مميز للشباب">خيار مميز للشباب</button>
+      <button class="badge-filter-button" data-badge="خيار مميز للنساء">خيار مميز للنساء</button>
+    </section>
+
+    <section class="products" id="product-grid">
+      <!-- المنتجات ستُعرض هنا بواسطة JavaScript -->
+    </section>
+
+    <section class="checkout" id="checkout-section">
+      <div class="checkout-panel">
+        <h2>طلبك</h2>
+        <p>املأ البيانات التالية لإتمام الطلب بسرعة.</p>
+        <form id="checkout-form">
+          <div class="form-row">
+            <label for="name">الاسم الكامل</label>
+            <input type="text" id="name" required placeholder="أدخل اسمك">
+          </div>
+          <div class="form-row">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" required placeholder="example@mail.com">
+          </div>
+          <div class="form-row">
+            <label for="address">عنوان التوصيل</label>
+            <textarea id="address" rows="3" required placeholder="المدينة، الحي، الشارع"></textarea>
+          </div>
+          <div class="order-summary" id="order-summary">
+            <p>عدد العناصر: <strong id="summary-items">0</strong></p>
+            <p>السعر الكلي: <strong id="summary-total">0 ر.س</strong></p>
+          </div>
+          <button type="submit" class="primary-button">إتمام الطلب</button>
+        </form>
+      </div>
+    </section>
+
+    <aside class="cart-panel" id="cart-panel" aria-hidden="true">
+      <div class="cart-header">
+        <h3>سلة التسوق</h3>
+        <button id="close-cart" class="icon-button" aria-label="إغلاق السلة">×</button>
+      </div>
+      <div id="cart-items" class="cart-items">
+        <p class="empty-cart">لم يكن هناك أي منتج بعد.</p>
+      </div>
+      <div class="cart-footer">
+        <p>الإجمالي: <strong id="cart-total">0 ر.س</strong></p>
+        <button id="checkout-button" class="primary-button">الانتقال للدفع</button>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <p>© 2026 متجر العطور. جميع الحقوق محفوظة.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
